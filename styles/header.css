@@ -1,0 +1,115 @@
+.cabecalho{
+    background-color: var(--cor-branca);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.cabecalho__container{
+    display: flex;
+    align-items: center;
+}
+.cabecalho__container__menu{
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.cabecalho__container__imagem{
+    padding: 1px;
+}
+.cabecalho__container__lista{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+.cabecalho__container__botao:checked ~ .cabecalho__container__lista{
+    display: block;
+}
+.cabecalho__container__botao{
+    display: none;
+}
+.cabecalho__container__lista__titulo, 
+.cabecalho__container__lista__item{
+    padding: 1em;
+    background-color: var(--cor-branca);
+}
+.cabecalho__container__lista__titulo{
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+.cabecalho__container__lista__item__link{
+    background: var(--cor-azul-gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.container__titulo{
+    display: none;
+}
+.opcoes{
+    display: none;
+}
+.cabecalho__container__texto{
+    display: none;
+}
+@media screen and (min-width: 1024px){
+    .container__titulo, 
+    .container__titulo-negrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        display: flex;
+    }
+    .container__titulo{
+        font-weight: 400;
+    }
+    .container__titulo-negrito{
+        font-weight: 700;
+    }
+    .opcoes{
+        display: flex;
+    }
+    .opcoes__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--cor-preta);
+    }
+    .container__imagem__transparente{
+        display: none;
+    }
+    .cabecalho__container__menu{
+        display: none;
+    }
+    .opcoes__botao:checked ~ .cabecalho__container__lista {
+        display: block;
+        width: auto;
+    }
+    .opcoes__botao{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .cabecalho{
+        padding: 0 2em;
+    }
+    .cabecalho__container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-preta);
+    }
+    .cabecalho__container__texto{
+        display: block;
+    }
+    .opcoes{
+        margin-right: auto;
+    }
+}
